@@ -6,6 +6,7 @@ func Reverse(str string) string {
 	target := []rune(str)
 	lp := 0
 	rp := len(target) - 1
+	// попарно меняем местами символы в строке
 	for lp < rp {
 		target[lp], target[rp] = target[rp], target[lp]
 		lp += 1

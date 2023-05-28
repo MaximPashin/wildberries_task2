@@ -6,6 +6,8 @@ func main() {
 	a := 5
 	b := 3
 	fmt.Println(a, b)
-	a, b = b, a
+	a = a + b
+	b = a - b
+	a = a - b
 	fmt.Println(a, b)
 }

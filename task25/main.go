@@ -7,6 +7,7 @@ import (
 )
 
 func sleep(interval time.Duration) {
+	// реализация sleep, через spinlock проверяющий время
 	before := time.Now().Add(interval)
 	for before.After(time.Now()) {
 		runtime.Gosched()

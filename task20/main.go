@@ -9,6 +9,7 @@ func ReverseWords(str string) string {
 	words := strings.Split(str, " ")
 	lp := 0
 	rp := len(words) - 1
+	// попарно меняем слова в массиве
 	for lp < rp {
 		words[lp], words[rp] = words[rp], words[lp]
 		lp += 1

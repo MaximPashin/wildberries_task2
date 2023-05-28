@@ -6,6 +6,7 @@ func delete(arr []int, i int) []int {
 	if len(arr) <= i {
 		return append(arr)
 	}
+	// удаление через сложение двух слайсов исключающий i-ый элемент
 	return append(arr[:i], arr[i+1:]...)
 }
 

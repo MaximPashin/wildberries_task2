@@ -7,6 +7,7 @@ import (
 
 func main() {
 	v := any(make(chan int))
+	// проверка типа через type assertion
 	switch v.(type) {
 	case int:
 		fmt.Println("int")

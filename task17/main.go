@@ -5,10 +5,13 @@ import "fmt"
 func BinSearch(arr []int, v int) (int, bool) {
 	lp := 0
 	rp := len(arr)
+	// критерий остановки
 	for lp < rp {
+		// число найдено
 		if arr[(lp+rp)/2] == v {
 			return (lp + rp) / 2, true
 		}
+		// изменение границ поиска в зависимости от того левее число или правее
 		if arr[(lp+rp)/2] < v {
 			lp = (lp+rp)/2 + 1
 		} else {

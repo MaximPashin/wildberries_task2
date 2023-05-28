@@ -6,6 +6,8 @@ func QuickSort(arr []int) {
 	if len(arr) == 0 {
 		return
 	}
+	// переносим элементы, что бы часть слева была меньше или равна выбранному элементу
+	// а правая была строго больше выбранного элемента
 	lp := 1
 	rp := len(arr) - 1
 	for lp < rp {
@@ -27,9 +29,11 @@ func QuickSort(arr []int) {
 	} else {
 		arr[0], arr[rp-1] = arr[rp-1], arr[0]
 	}
+	// проверка на достижение конца рекурсии
 	if len(arr) < 3 {
 		return
 	}
+	// рекурсивный вызов на полученных частях
 	QuickSort(arr[:rp-1])
 	QuickSort(arr[rp:])
 }
